@@ -26,8 +26,13 @@ void add(reg *acc_reg, reg *op_reg)
     acc_reg->value = acc_reg->value + op_reg->value;
 }
 
-//SUB RA RB
+// SUB RA RB
 void sub(reg *acc_reg, reg *op_reg)
 {
     acc_reg->value = acc_reg->value - op_reg->value;
+}
+
+// JMP 0x1000
+void jump(unsigned short address){
+    registers[PC].value = address;
 }
