@@ -36,10 +36,14 @@ enum instructions {
     JMP  //0x0005
 };
 
+void print_registers();
+
+// Instruction set
 void set_register_direct(reg *, unsigned short);
 void copy_register_from_register(reg *d_reg, reg *s_reg);
-void add(reg *acc_reg, reg *op_reg);
-void sub(reg *acc_reg, reg *op_reg);
+void add(reg *op_reg);
+void sub(reg *op_reg);
 void jump(unsigned short address);
+
 
 #endif
